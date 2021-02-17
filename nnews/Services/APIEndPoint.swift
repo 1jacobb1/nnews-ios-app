@@ -26,7 +26,8 @@ extension APIEndPoint: TargetType {
         //http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=API_KEY
         case .topHeadlines: return "/top-headlines"
 
-        //http://newsapi.org/v2/everything?q=philippines&from=2021-01-22&sortBy=publishedAt&apiKey=4ec69be3e03a45a990a654b13983cf55&page=3
+        //http://newsapi.org/v2/everything?q=philippines&from=2021-01-22
+        //&sortBy=publishedAt&apiKey=4ec69be3e03a45a990a654b13983cf55&page=3
         case .everything: return "/everything" 
         }
     }
@@ -40,7 +41,7 @@ extension APIEndPoint: TargetType {
                            encoding: URLEncoding.queryString)
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         [
             "Accept": "application/json",
             "Content-Type": "application/json"

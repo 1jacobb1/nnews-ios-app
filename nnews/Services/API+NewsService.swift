@@ -67,15 +67,3 @@ extension QueueScheduler {
 extension URLQueryItem {
     static let apiKeyParameter = "apiKey"
 }
-
-//"source": {
-//    "id": null,
-//    "name": "Yahoo Entertainment"
-//},
-//"author": "Alex Smith",
-//"title": "Is Bright Horizons Family Solutions (BFAM) Stock a Buy For 2021?",
-//"description": "Upslope Capital recently released its Q4 2020 Investor Letter, a copy of which you can download here. The Fund returned 7.9% net of fees for the fourth...",
-//"url": "https://finance.yahoo.com/news/bright-horizons-family-solutions-bfam-171438447.html",
-//"urlToImage": "https://s.yimg.com/uu/api/res/1.2/Yl9MrPH5x09Kb7haajCZlg--~B/aD0yMTI7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/insidermonkey.com/87fcece59eb8f4329110aa704efe23a6",
-//"publishedAt": "2021-01-22T17:14:38Z",
-//"content": "There were women among the crowd that marched to the Capitol and stormed the building. Shay Horse/NurPhoto via Getty ImagesThe terror inflicted on the U.S. Capitol on Jan. 6 laid bare Americas proble… [+6332 chars]"

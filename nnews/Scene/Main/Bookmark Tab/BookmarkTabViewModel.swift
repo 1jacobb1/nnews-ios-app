@@ -24,8 +24,7 @@ protocol BookmarkTabViewModelTypes {
     var outputs: BookmarkTabViewModelOutputs { get }
 }
 
-class BookmarkTabViewModel:
-    BookmarkTabViewModelTypes,
+class BookmarkTabViewModel: BookmarkTabViewModelTypes,
     BookmarkTabViewModelOutputs,
     BookmarkTabViewModelInputs {
     var inputs: BookmarkTabViewModelInputs { return self }

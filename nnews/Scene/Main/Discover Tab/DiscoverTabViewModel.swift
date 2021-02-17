@@ -43,22 +43,21 @@ struct ArticleRequestParam {
     var apiRequestState: APIRequestState = .notStarted
 }
 
-class DiscoverTabViewModel:
-    DiscoverTabViewModelTypes,
+class DiscoverTabViewModel: DiscoverTabViewModelTypes,
     DiscoverTabViewModelOutputs,
     DiscoverTabViewModelInputs {
     var inputs: DiscoverTabViewModelInputs { return self }
     var outputs: DiscoverTabViewModelOutputs { return self }
     
-    var headlineRequestParam: MutableProperty<ArticleRequestParam> = MutableProperty(ArticleRequestParam(country: .philippines))
+    var headlineRequestParam = MutableProperty(ArticleRequestParam(country: .philippines))
     var headlineArticles: MutableProperty<[Article]> = MutableProperty([])
-    var businessArticleRequestParam: MutableProperty<ArticleRequestParam> = MutableProperty(ArticleRequestParam(country: .philippines,
-                                                                                                                category: .business,
-                                                                                                                perPage: 6))
+    var businessArticleRequestParam = MutableProperty(ArticleRequestParam(country: .philippines,
+                                                                          category: .business,
+                                                                          perPage: 6))
     var businessArticles: MutableProperty<[Article]> = MutableProperty([])
-    var entertainmentArticleRequestParam: MutableProperty<ArticleRequestParam> = MutableProperty(ArticleRequestParam(country: .philippines,
-                                                                                                                     category: .entertainment,
-                                                                                                                     perPage: 4))
+    var entertainmentArticleRequestParam = MutableProperty(ArticleRequestParam(country: .philippines,
+                                                                               category: .entertainment,
+                                                                               perPage: 4))
     var entertainmentArticles: MutableProperty<[Article]> = MutableProperty([])
     
     init() {
@@ -186,7 +185,10 @@ class DiscoverTabViewModel:
                             guard let realm = try? LocalDataManager.getInstance() else { return }
                             try? realm.write {
                                 let articlesToDelete = realm.objects(ArticleObject.self)
-                                    .filter { $0.country == country.rawValue && $0.category == category?.rawValue ?? "" }
+                                    .filter {
+                                        $0.country == country.rawValue &&
+                                        $0.category == category?.rawValue ?? ""
+                                    }
                                 realm.delete(articlesToDelete)
                             }
                         }
