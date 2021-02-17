@@ -51,7 +51,9 @@ class ArticleCollectionCell: UICollectionViewCell, ReusableView {
         articleContainer.layer.shadowRadius = 2.0
         articleContainer.layer.shadowOpacity = 1.0
         articleContainer.layer.masksToBounds = false
-        articleContainer.layer.shadowPath = UIBezierPath(roundedRect:articleContainer.bounds, cornerRadius:articleContainer.layer.cornerRadius).cgPath
+        let shadowPath = UIBezierPath(roundedRect: articleContainer.bounds,
+                                      cornerRadius: articleContainer.layer.cornerRadius).cgPath
+        articleContainer.layer.shadowPath = shadowPath
         
         headlineImageView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
     }

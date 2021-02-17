@@ -8,9 +8,9 @@
 import UIKit
 
 extension DiscoverTabViewController:
-    UICollectionViewDelegate,
-    UICollectionViewDataSource,
-    UICollectionViewDelegateFlowLayout {
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var articles: [Article] = []
         if collectionView == headlinesView.collectionView {
@@ -23,7 +23,8 @@ extension DiscoverTabViewController:
         return articles.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var articles: [Article] = []
         
         if collectionView == headlinesView.collectionView {
@@ -55,7 +56,9 @@ extension DiscoverTabViewController:
         return UICollectionViewCell()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewSize = collectionView.bounds.size
         var size = CGSize.zero
         if collectionView == headlinesView.collectionView {
@@ -71,7 +74,9 @@ extension DiscoverTabViewController:
         return size
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
         if collectionView == headlinesView.collectionView {
             let headlinesCount = viewModel.outputs.headlineArticles.value.count
             if indexPath.item >= headlinesCount - 1 {

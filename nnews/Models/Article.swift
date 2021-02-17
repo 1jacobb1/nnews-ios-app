@@ -30,7 +30,7 @@ struct Article: Codable {
         urlToImage?.absoluteString ?? ""
     }
     
-    enum CodingKeys: String , CodingKey {
+    enum CodingKeys: String, CodingKey {
         case source,
              author,
              title,

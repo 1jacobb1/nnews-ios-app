@@ -1,0 +1,15 @@
+input_dir: nnews/Resources/
+output_dir: nnews/Resources/SwiftGen
+xcassets:
+  inputs:
+    - Images.xcassets
+    - Colors.xcassets
+  outputs:
+    templateName: swift4
+    output: Assets.swift
+strings:
+  inputs:
+    - Base.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: Strings.swift
