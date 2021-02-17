@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import SDWebImage
 import ReactiveCocoa
+import SafariServices
 
 class DiscoverTabViewController: BaseViewController {
     /// UI Properties
@@ -50,6 +51,13 @@ class DiscoverTabViewController: BaseViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .white
         setUpBinding()
+    }
+    
+    func presentNewsDetail(with article: Article) {
+        guard let url = article.url else { return }
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .overFullScreen
+        present(safariVC, animated: true)
     }
 }
 

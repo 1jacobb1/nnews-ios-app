@@ -1,5 +1,5 @@
 //
-//  BookmarkTab+Bindings.swift
+//  BookmarkTabViewController+Bindings.swift
 //  nnews
 //
 //  Created by Jacob on 2/15/21.

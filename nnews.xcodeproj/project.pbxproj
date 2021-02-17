@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07561860DC9DB07752D39D8F /* Pods_nnews_nnewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B3B9400269684D14F90598 /* Pods_nnews_nnewsUITests.framework */; };
-		160DEA5625DA5E54000B99C9 /* BookmarkTab+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5525DA5E54000B99C9 /* BookmarkTab+View.swift */; };
-		160DEA5B25DA5EFD000B99C9 /* BookmarTab+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5A25DA5EFD000B99C9 /* BookmarTab+Collection.swift */; };
-		160DEA6025DA6278000B99C9 /* BookmarkTab+Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5F25DA6278000B99C9 /* BookmarkTab+Bindings.swift */; };
+		160DEA5625DA5E54000B99C9 /* BookmarkTabViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5525DA5E54000B99C9 /* BookmarkTabViewController+View.swift */; };
+		160DEA5B25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5A25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift */; };
+		160DEA6025DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160DEA5F25DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift */; };
 		161B17A325D4FA8300533DA1 /* BookmarkTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B17A225D4FA8300533DA1 /* BookmarkTabViewModel.swift */; };
 		1637805325D61C6300ADCE27 /* BookMarkArticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637805225D61C6300ADCE27 /* BookMarkArticleObject.swift */; };
 		1637805825D61C9600ADCE27 /* BookMarkArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637805725D61C9600ADCE27 /* BookMarkArticle.swift */; };
@@ -37,11 +37,11 @@
 		163F669C25BBFBE800365787 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F669B25BBFBE800365787 /* ReusableView.swift */; };
 		163F66A525BC021A00365787 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66A425BC021A00365787 /* UIView+SafeArea.swift */; };
 		163F66AE25BC235B00365787 /* ArticleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66AD25BC235B00365787 /* ArticleCollectionCell.swift */; };
-		163F66B625BC239F00365787 /* DiscoverTab+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66B525BC239F00365787 /* DiscoverTab+View.swift */; };
+		163F66B625BC239F00365787 /* DiscoverTabViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66B525BC239F00365787 /* DiscoverTabViewController+View.swift */; };
 		163F66BB25BC23CF00365787 /* DiscoverTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66BA25BC23CF00365787 /* DiscoverTabViewModel.swift */; };
-		163F66C025BC244400365787 /* DiscoverTab+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66BF25BC244400365787 /* DiscoverTab+Collection.swift */; };
+		163F66C025BC244400365787 /* DiscoverTabViewController+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66BF25BC244400365787 /* DiscoverTabViewController+Collection.swift */; };
 		163F66C625BC24B800365787 /* ArticlesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66C525BC24B800365787 /* ArticlesCollectionView.swift */; };
-		163F66CE25BC275400365787 /* DiscoverTab+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66CD25BC275400365787 /* DiscoverTab+Binding.swift */; };
+		163F66CE25BC275400365787 /* DiscoverTabViewController+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66CD25BC275400365787 /* DiscoverTabViewController+Binding.swift */; };
 		163F66EF25BC2A4500365787 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66EE25BC2A4500365787 /* UIScreen+Extensions.swift */; };
 		163F66F425BC2A7500365787 /* CollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66F325BC2A7500365787 /* CollectionView+Extensions.swift */; };
 		163F66F925BC2A9300365787 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F66F825BC2A9300365787 /* UIImageView+Extensions.swift */; };
@@ -72,9 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		160DEA5525DA5E54000B99C9 /* BookmarkTab+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkTab+View.swift"; sourceTree = "<group>"; };
-		160DEA5A25DA5EFD000B99C9 /* BookmarTab+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarTab+Collection.swift"; sourceTree = "<group>"; };
-		160DEA5F25DA6278000B99C9 /* BookmarkTab+Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkTab+Bindings.swift"; sourceTree = "<group>"; };
+		160DEA5525DA5E54000B99C9 /* BookmarkTabViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkTabViewController+View.swift"; sourceTree = "<group>"; };
+		160DEA5A25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkTabViewController+Collection.swift"; sourceTree = "<group>"; };
+		160DEA5F25DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookmarkTabViewController+Bindings.swift"; sourceTree = "<group>"; };
 		161B17A225D4FA8300533DA1 /* BookmarkTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTabViewModel.swift; sourceTree = "<group>"; };
 		1637805225D61C6300ADCE27 /* BookMarkArticleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkArticleObject.swift; sourceTree = "<group>"; };
 		1637805725D61C9600ADCE27 /* BookMarkArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkArticle.swift; sourceTree = "<group>"; };
@@ -107,11 +107,11 @@
 		163F669B25BBFBE800365787 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		163F66A425BC021A00365787 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		163F66AD25BC235B00365787 /* ArticleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionCell.swift; sourceTree = "<group>"; };
-		163F66B525BC239F00365787 /* DiscoverTab+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTab+View.swift"; sourceTree = "<group>"; };
+		163F66B525BC239F00365787 /* DiscoverTabViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTabViewController+View.swift"; sourceTree = "<group>"; };
 		163F66BA25BC23CF00365787 /* DiscoverTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTabViewModel.swift; sourceTree = "<group>"; };
-		163F66BF25BC244400365787 /* DiscoverTab+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTab+Collection.swift"; sourceTree = "<group>"; };
+		163F66BF25BC244400365787 /* DiscoverTabViewController+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTabViewController+Collection.swift"; sourceTree = "<group>"; };
 		163F66C525BC24B800365787 /* ArticlesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesCollectionView.swift; sourceTree = "<group>"; };
-		163F66CD25BC275400365787 /* DiscoverTab+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTab+Binding.swift"; sourceTree = "<group>"; };
+		163F66CD25BC275400365787 /* DiscoverTabViewController+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTabViewController+Binding.swift"; sourceTree = "<group>"; };
 		163F66EE25BC2A4500365787 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		163F66F325BC2A7500365787 /* CollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		163F66F825BC2A9300365787 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -263,11 +263,11 @@
 		163F65A325BBED5000365787 /* Discover Tab */ = {
 			isa = PBXGroup;
 			children = (
-				163F65A425BBED6200365787 /* DiscoverTabViewController.swift */,
-				163F66B525BC239F00365787 /* DiscoverTab+View.swift */,
 				163F66BA25BC23CF00365787 /* DiscoverTabViewModel.swift */,
-				163F66BF25BC244400365787 /* DiscoverTab+Collection.swift */,
-				163F66CD25BC275400365787 /* DiscoverTab+Binding.swift */,
+				163F65A425BBED6200365787 /* DiscoverTabViewController.swift */,
+				163F66B525BC239F00365787 /* DiscoverTabViewController+View.swift */,
+				163F66CD25BC275400365787 /* DiscoverTabViewController+Binding.swift */,
+				163F66BF25BC244400365787 /* DiscoverTabViewController+Collection.swift */,
 			);
 			path = "Discover Tab";
 			sourceTree = "<group>";
@@ -307,11 +307,11 @@
 		163F668925BBF3C800365787 /* Bookmark Tab */ = {
 			isa = PBXGroup;
 			children = (
-				163F668A25BBF3E200365787 /* BookmarkTabViewController.swift */,
 				161B17A225D4FA8300533DA1 /* BookmarkTabViewModel.swift */,
-				160DEA5525DA5E54000B99C9 /* BookmarkTab+View.swift */,
-				160DEA5A25DA5EFD000B99C9 /* BookmarTab+Collection.swift */,
-				160DEA5F25DA6278000B99C9 /* BookmarkTab+Bindings.swift */,
+				163F668A25BBF3E200365787 /* BookmarkTabViewController.swift */,
+				160DEA5525DA5E54000B99C9 /* BookmarkTabViewController+View.swift */,
+				160DEA5F25DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift */,
+				160DEA5A25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift */,
 			);
 			path = "Bookmark Tab";
 			sourceTree = "<group>";
@@ -618,22 +618,22 @@
 				163F671925BC343200365787 /* APIRequestState.swift in Sources */,
 				163F670325BC2CCF00365787 /* CocoaLumberjack+Extension.swift in Sources */,
 				163F65BE25BBEEB800365787 /* MainViewController.swift in Sources */,
-				160DEA5B25DA5EFD000B99C9 /* BookmarTab+Collection.swift in Sources */,
+				160DEA5B25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift in Sources */,
 				163F659E25BBEB3800365787 /* Category.swift in Sources */,
 				163F659925BBEB1800365787 /* Country.swift in Sources */,
 				163F66AE25BC235B00365787 /* ArticleCollectionCell.swift in Sources */,
 				163F668B25BBF3E200365787 /* BookmarkTabViewController.swift in Sources */,
-				163F66CE25BC275400365787 /* DiscoverTab+Binding.swift in Sources */,
+				163F66CE25BC275400365787 /* DiscoverTabViewController+Binding.swift in Sources */,
 				163F669425BBF4CD00365787 /* ApplicationCoordinator.swift in Sources */,
 				163F66A525BC021A00365787 /* UIView+SafeArea.swift in Sources */,
-				160DEA6025DA6278000B99C9 /* BookmarkTab+Bindings.swift in Sources */,
+				160DEA6025DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift in Sources */,
 				163F659125BBDDA700365787 /* NewsResponse.swift in Sources */,
 				161B17A325D4FA8300533DA1 /* BookmarkTabViewModel.swift in Sources */,
 				163F658025BBD7F200365787 /* API+NewsService.swift in Sources */,
-				163F66B625BC239F00365787 /* DiscoverTab+View.swift in Sources */,
+				163F66B625BC239F00365787 /* DiscoverTabViewController+View.swift in Sources */,
 				163F66F425BC2A7500365787 /* CollectionView+Extensions.swift in Sources */,
 				163F66EF25BC2A4500365787 /* UIScreen+Extensions.swift in Sources */,
-				160DEA5625DA5E54000B99C9 /* BookmarkTab+View.swift in Sources */,
+				160DEA5625DA5E54000B99C9 /* BookmarkTabViewController+View.swift in Sources */,
 				163F66BB25BC23CF00365787 /* DiscoverTabViewModel.swift in Sources */,
 				163F65AF25BBEDA800365787 /* BaseViewController.swift in Sources */,
 				1637805325D61C6300ADCE27 /* BookMarkArticleObject.swift in Sources */,
@@ -644,7 +644,7 @@
 				1637805825D61C9600ADCE27 /* BookMarkArticle.swift in Sources */,
 				163F634425BBC8CB00365787 /* AppDelegate.swift in Sources */,
 				163F671125BC30D500365787 /* Persistable.swift in Sources */,
-				163F66C025BC244400365787 /* DiscoverTab+Collection.swift in Sources */,
+				163F66C025BC244400365787 /* DiscoverTabViewController+Collection.swift in Sources */,
 				163F65A525BBED6200365787 /* DiscoverTabViewController.swift in Sources */,
 				163F638D25BBCB7900365787 /* APIEndPoint.swift in Sources */,
 				163F670925BC2F4300365787 /* ArticleObject.swift in Sources */,

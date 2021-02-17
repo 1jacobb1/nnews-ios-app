@@ -68,6 +68,8 @@ class ArticleCollectionCell: UICollectionViewCell, ReusableView {
         bookMarkBtn.isSelected = article.isBookMarked
     }
     
+    func getArticle() -> Article? { article }
+    
     private func setUpCell() {
         setUpArticleContainer()
         setUpHeadlineImageView()

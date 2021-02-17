@@ -1,5 +1,5 @@
 //
-//  DiscoverTab+Collection.swift
+//  DiscoverTabViewController+Collection.swift
 //  nnews
 //
 //  Created by Jacob on 1/23/21.
@@ -42,8 +42,13 @@ extension DiscoverTabViewController:
                 cell.headlineImageHeight = .small
             }
             cell.delegate = self
-            cell.setUp(article: articles[indexPath.row])
             cell.layoutSubviews()
+            
+            if articles.count <= indexPath.row {
+                return cell
+            }
+            
+            cell.setUp(article: articles[indexPath.row])
             return cell
         }
         
@@ -73,6 +78,12 @@ extension DiscoverTabViewController:
                 viewModel.inputs.loadMoreHeadlines()
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ArticleCollectionCell,
+              let article = cell.getArticle() else { return }
+        presentNewsDetail(with: article)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

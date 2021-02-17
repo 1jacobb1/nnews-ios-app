@@ -1,5 +1,5 @@
 //
-//  DiscoverTab+View.swift
+//  DiscoverTabViewController+View.swift
 //  nnews
 //
 //  Created by Jacob on 1/23/21.

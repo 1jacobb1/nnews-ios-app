@@ -1,5 +1,5 @@
 //
-//  BookmarTab+Collection.swift
+//  BookmarkTabViewController+Collection.swift
 //  nnews
 //
 //  Created by Jacob on 2/15/21.
