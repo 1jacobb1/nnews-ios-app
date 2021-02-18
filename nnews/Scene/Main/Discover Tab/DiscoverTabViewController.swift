@@ -11,6 +11,10 @@ import SDWebImage
 import ReactiveCocoa
 import SafariServices
 
+protocol DiscoverTabViewControllerDelegate: class {
+    func navigateToSeeMoreArticleWith(category: Category?, country: Country)
+}
+
 class DiscoverTabViewController: BaseViewController {
     /// UI Properties
     var scrollView = UIScrollView()
@@ -32,6 +36,7 @@ class DiscoverTabViewController: BaseViewController {
     var technologNewsView = ArticlesCollectionView()
     
     var viewModel: DiscoverTabViewModel
+    weak var delegate: DiscoverTabViewControllerDelegate?
     
     init(viewModel: DiscoverTabViewModel) {
         self.viewModel = viewModel

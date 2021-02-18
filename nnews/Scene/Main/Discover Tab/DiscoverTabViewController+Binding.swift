@@ -10,6 +10,14 @@ import UIKit
 
 extension DiscoverTabViewController {
     func setUpBinding() {
+        setSeeMoreNavigationOn(sectionView: businessNewsSection, category: .business)
+        setSeeMoreNavigationOn(sectionView: entertainmentNewsSection, category: .entertainment)
+        setSeeMoreNavigationOn(sectionView: generalNewsSection, category: .general)
+        setSeeMoreNavigationOn(sectionView: sportsNewsSection, category: .sports)
+        setSeeMoreNavigationOn(sectionView: healthNewsSection, category: .health)
+        setSeeMoreNavigationOn(sectionView: scienceNewsSection, category: .science)
+        setSeeMoreNavigationOn(sectionView: technologyNewsSection, category: .technology)
+        
         viewModel.outputs.headlineArticles
             .signal
             .observe(on: uiSchedule)
@@ -39,5 +47,14 @@ extension DiscoverTabViewController {
     
     private func handleArticleOn(collectionView: UICollectionView) {
         collectionView.reloadData()
+    }
+    
+    private func setSeeMoreNavigationOn(sectionView: ArticleCategoryWithSeeMoreView, category: Category) {
+        sectionView.seeMoreBtn.reactive
+            .controlEvents(.touchUpInside)
+            .observeValues { [unowned self] _ in
+                self.delegate?.navigateToSeeMoreArticleWith(category: category,
+                                                            country: .philippines)
+            }
     }
 }

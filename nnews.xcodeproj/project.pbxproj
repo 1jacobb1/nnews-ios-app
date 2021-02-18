@@ -55,6 +55,15 @@
 		163F670925BC2F4300365787 /* ArticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F670825BC2F4300365787 /* ArticleObject.swift */; };
 		163F671125BC30D500365787 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F671025BC30D500365787 /* Persistable.swift */; };
 		163F671925BC343200365787 /* APIRequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F671825BC343200365787 /* APIRequestState.swift */; };
+		1684B90525DE37510086F7BD /* MoreArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B90425DE37510086F7BD /* MoreArticlesViewController.swift */; };
+		1684B90D25DE37A20086F7BD /* MoreArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B90C25DE37A20086F7BD /* MoreArticlesViewModel.swift */; };
+		1684B91225DE41680086F7BD /* MoreArticlesViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B91125DE41680086F7BD /* MoreArticlesViewController+View.swift */; };
+		1684B91725DE41D40086F7BD /* MoreArticlesViewController+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B91625DE41D40086F7BD /* MoreArticlesViewController+Binding.swift */; };
+		1684B92125DE4AEA0086F7BD /* NSPredicate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B92025DE4AEA0086F7BD /* NSPredicate+Extensions.swift */; };
+		1684B92625DE4B500086F7BD /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B92525DE4B500086F7BD /* Predicates.swift */; };
+		1684B92B25DE4B830086F7BD /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B92A25DE4B830086F7BD /* Query.swift */; };
+		1684B93325DE60000086F7BD /* MoreArticlesViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B93225DE60000086F7BD /* MoreArticlesViewController+Table.swift */; };
+		1684B93925DE83040086F7BD /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B93825DE83040086F7BD /* ArticleTableViewCell.swift */; };
 		4EE3D3C9E9052531833E1926 /* Pods_nnews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A31A312068094DA127F748 /* Pods_nnews.framework */; };
 		F0EC3D4AF870CC4C7A2B2A1B /* Pods_nnewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718DED2BA2070228D0618E29 /* Pods_nnewsTests.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +141,15 @@
 		163F670825BC2F4300365787 /* ArticleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleObject.swift; sourceTree = "<group>"; };
 		163F671025BC30D500365787 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		163F671825BC343200365787 /* APIRequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestState.swift; sourceTree = "<group>"; };
+		1684B90425DE37510086F7BD /* MoreArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreArticlesViewController.swift; sourceTree = "<group>"; };
+		1684B90C25DE37A20086F7BD /* MoreArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreArticlesViewModel.swift; sourceTree = "<group>"; };
+		1684B91125DE41680086F7BD /* MoreArticlesViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoreArticlesViewController+View.swift"; sourceTree = "<group>"; };
+		1684B91625DE41D40086F7BD /* MoreArticlesViewController+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoreArticlesViewController+Binding.swift"; sourceTree = "<group>"; };
+		1684B92025DE4AEA0086F7BD /* NSPredicate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Extensions.swift"; sourceTree = "<group>"; };
+		1684B92525DE4B500086F7BD /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
+		1684B92A25DE4B830086F7BD /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		1684B93225DE60000086F7BD /* MoreArticlesViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoreArticlesViewController+Table.swift"; sourceTree = "<group>"; };
+		1684B93825DE83040086F7BD /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		3EB3310373CF34A1541EF63D /* Pods-nnewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nnewsTests.debug.xcconfig"; path = "Target Support Files/Pods-nnewsTests/Pods-nnewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61E38B56C3AA82C237B45477 /* Pods-nnews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nnews.debug.xcconfig"; path = "Target Support Files/Pods-nnews/Pods-nnews.debug.xcconfig"; sourceTree = "<group>"; };
 		718DED2BA2070228D0618E29 /* Pods_nnewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nnewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +294,7 @@
 				163F659825BBEB1800365787 /* Country.swift */,
 				163F659D25BBEB3800365787 /* Category.swift */,
 				163F671825BC343200365787 /* APIRequestState.swift */,
+				1684B92A25DE4B830086F7BD /* Query.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -309,6 +328,7 @@
 				163F66B525BC239F00365787 /* DiscoverTabViewController+View.swift */,
 				163F66CD25BC275400365787 /* DiscoverTabViewController+Binding.swift */,
 				163F66BF25BC244400365787 /* DiscoverTabViewController+Collection.swift */,
+				1684B90325DE373A0086F7BD /* More Articles */,
 			);
 			path = "Discover Tab";
 			sourceTree = "<group>";
@@ -316,6 +336,7 @@
 		163F65AC25BBED8700365787 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				1684B93725DE82F70086F7BD /* Table Cell */,
 				163F66AC25BC232B00365787 /* Collection Cell */,
 				163F66A025BBFBF400365787 /* UIView */,
 				163F65AD25BBED9900365787 /* View Controller */,
@@ -323,6 +344,8 @@
 				163F66F325BC2A7500365787 /* CollectionView+Extensions.swift */,
 				163F66F825BC2A9300365787 /* UIImageView+Extensions.swift */,
 				163F670225BC2CCF00365787 /* CocoaLumberjack+Extension.swift */,
+				1684B92025DE4AEA0086F7BD /* NSPredicate+Extensions.swift */,
+				1684B92525DE4B500086F7BD /* Predicates.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -390,6 +413,26 @@
 				1637805225D61C6300ADCE27 /* BookMarkArticleObject.swift */,
 			);
 			path = "Local Data Object";
+			sourceTree = "<group>";
+		};
+		1684B90325DE373A0086F7BD /* More Articles */ = {
+			isa = PBXGroup;
+			children = (
+				1684B90425DE37510086F7BD /* MoreArticlesViewController.swift */,
+				1684B90C25DE37A20086F7BD /* MoreArticlesViewModel.swift */,
+				1684B91125DE41680086F7BD /* MoreArticlesViewController+View.swift */,
+				1684B91625DE41D40086F7BD /* MoreArticlesViewController+Binding.swift */,
+				1684B93225DE60000086F7BD /* MoreArticlesViewController+Table.swift */,
+			);
+			path = "More Articles";
+			sourceTree = "<group>";
+		};
+		1684B93725DE82F70086F7BD /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1684B93825DE83040086F7BD /* ArticleTableViewCell.swift */,
+			);
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 		97E9F8FD67854009ACD8F0C0 /* Pods */ = {
@@ -698,12 +741,17 @@
 				163F658925BBDD2B00365787 /* Article.swift in Sources */,
 				163F66C625BC24B800365787 /* ArticlesCollectionView.swift in Sources */,
 				1637805D25D61CDE00ADCE27 /* Source.swift in Sources */,
+				1684B92125DE4AEA0086F7BD /* NSPredicate+Extensions.swift in Sources */,
+				1684B93925DE83040086F7BD /* ArticleTableViewCell.swift in Sources */,
 				163F671925BC343200365787 /* APIRequestState.swift in Sources */,
 				163F670325BC2CCF00365787 /* CocoaLumberjack+Extension.swift in Sources */,
 				163F65BE25BBEEB800365787 /* MainViewController.swift in Sources */,
 				160DEC4C25DD0D4A000B99C9 /* Strings.swift in Sources */,
 				160DEA5B25DA5EFD000B99C9 /* BookmarkTabViewController+Collection.swift in Sources */,
 				163F659E25BBEB3800365787 /* Category.swift in Sources */,
+				1684B91725DE41D40086F7BD /* MoreArticlesViewController+Binding.swift in Sources */,
+				1684B90525DE37510086F7BD /* MoreArticlesViewController.swift in Sources */,
+				1684B93325DE60000086F7BD /* MoreArticlesViewController+Table.swift in Sources */,
 				163F659925BBEB1800365787 /* Country.swift in Sources */,
 				163F66AE25BC235B00365787 /* ArticleCollectionCell.swift in Sources */,
 				163F668B25BBF3E200365787 /* BookmarkTabViewController.swift in Sources */,
@@ -711,11 +759,14 @@
 				163F669425BBF4CD00365787 /* ApplicationCoordinator.swift in Sources */,
 				163F66A525BC021A00365787 /* UIView+SafeArea.swift in Sources */,
 				160DEA6025DA6278000B99C9 /* BookmarkTabViewController+Bindings.swift in Sources */,
+				1684B91225DE41680086F7BD /* MoreArticlesViewController+View.swift in Sources */,
+				1684B90D25DE37A20086F7BD /* MoreArticlesViewModel.swift in Sources */,
 				163F659125BBDDA700365787 /* NewsResponse.swift in Sources */,
 				160DEC4D25DD0D4A000B99C9 /* Assets.swift in Sources */,
 				161B17A325D4FA8300533DA1 /* BookmarkTabViewModel.swift in Sources */,
 				163F658025BBD7F200365787 /* API+NewsService.swift in Sources */,
 				163F66B625BC239F00365787 /* DiscoverTabViewController+View.swift in Sources */,
+				1684B92B25DE4B830086F7BD /* Query.swift in Sources */,
 				163F66F425BC2A7500365787 /* CollectionView+Extensions.swift in Sources */,
 				163F66EF25BC2A4500365787 /* UIScreen+Extensions.swift in Sources */,
 				160DEA5625DA5E54000B99C9 /* BookmarkTabViewController+View.swift in Sources */,
@@ -731,6 +782,7 @@
 				163F671125BC30D500365787 /* Persistable.swift in Sources */,
 				163F66C025BC244400365787 /* DiscoverTabViewController+Collection.swift in Sources */,
 				163F65A525BBED6200365787 /* DiscoverTabViewController.swift in Sources */,
+				1684B92625DE4B500086F7BD /* Predicates.swift in Sources */,
 				163F638D25BBCB7900365787 /* APIEndPoint.swift in Sources */,
 				163F670925BC2F4300365787 /* ArticleObject.swift in Sources */,
 				163F634625BBC8CB00365787 /* SceneDelegate.swift in Sources */,

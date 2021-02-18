@@ -20,7 +20,7 @@ class ApplicationCoordinator: Coordinator {
     }
     
     func start() {
-        window.rootViewController = MainViewController()
+        window.rootViewController = UINavigationController(rootViewController: MainViewController())
         window.makeKeyAndVisible()
     }
 }
