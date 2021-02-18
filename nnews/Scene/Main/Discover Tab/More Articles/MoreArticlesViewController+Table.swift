@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension MoreArticlesViewController:
+extension MoreArticlesViewController: 
     UITableViewDelegate,
     UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,5 +29,11 @@ extension MoreArticlesViewController:
         if indexPath.row >= articles.count - 5 {
             viewModel.inputs.fetchMoreArticle()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ArticleTableViewCell,
+              let article = cell.getArticle() else { return }
+        presentNewsDetail(with: article)
     }
 }

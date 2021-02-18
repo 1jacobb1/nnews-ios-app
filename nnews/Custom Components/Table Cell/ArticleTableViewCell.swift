@@ -37,6 +37,8 @@ class ArticleTableViewCell: UITableViewCell, ReusableView {
         setUpCellWithArticleContent()
     }
     
+    func getArticle() -> Article? { article }
+    
     private func setUpCell() {
         backgroundColor = .clear
         setUpContainerView()

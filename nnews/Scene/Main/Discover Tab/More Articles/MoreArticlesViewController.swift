@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MoreArticlesViewController: BaseViewController {
     // MARK: - UI
@@ -39,5 +40,12 @@ class MoreArticlesViewController: BaseViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         viewModel.inputs.viewDidDisappear()
+    }
+    
+    func presentNewsDetail(with article: Article) {
+        guard let url = article.url else { return }
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .popover
+        present(safariVC, animated: true)
     }
 }
