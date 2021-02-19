@@ -26,6 +26,12 @@ UICollectionViewDelegateFlowLayout {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ArticleCollectionCell,
+              let article = cell.getArticle() else { return }
+        presentNewsDetail(with: article)
+    }
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

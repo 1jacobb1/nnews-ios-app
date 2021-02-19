@@ -12,6 +12,7 @@ import CocoaLumberjack
 
 protocol BookmarkTabViewModelInputs {
     func viewDidLoad()
+    func viewDidAppear()
     func bookMarkArticle(_ article: BookMarkArticle)
 }
 
@@ -46,7 +47,12 @@ class BookmarkTabViewModel: BookmarkTabViewModelTypes,
     func viewDidLoad() {
         viewDidLoadProp.value = ()
     }
-    
+
+    private var viewDidAppearProp = MutableProperty(())
+    func viewDidAppear() {
+        viewDidAppearProp.value = ()
+    }
+
     private var bookMarkArticleProp = MutableProperty(BookMarkArticle())
     func bookMarkArticle(_ article: BookMarkArticle) {
         bookMarkArticleProp.value = article

@@ -99,8 +99,9 @@ class MoreArticlesViewModel: MoreArticlesViewModelTypes,
             switch changes {
             case .initial(let articleObjects),
                  .update(let articleObjects, _, _, _):
-                debugPrint("realm article: \(articleObjects)")
-                self.articles.value = articleObjects.map { Article(realmObject: $0) }
+                self.articles.value = articleObjects
+                    .filter { $0.urlToImage != nil }
+                    .map { Article(realmObject: $0) }
                 break
             case .error(let err):
                 DDLogError("Error: \(err)")

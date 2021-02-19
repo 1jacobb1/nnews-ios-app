@@ -20,7 +20,7 @@ extension MoreArticlesViewController {
         articleTableView.rowHeight = UITableView.automaticDimension
         articleTableView.estimatedRowHeight = UITableView.automaticDimension
         articleTableView.separatorInset = .zero
-        articleTableView.backgroundColor = .lightGray
+        articleTableView.backgroundColor = Asset.Colors.moreArticleTblBackground.color
         articleTableView.separatorStyle = .none
 
         view.addSubview(articleTableView)

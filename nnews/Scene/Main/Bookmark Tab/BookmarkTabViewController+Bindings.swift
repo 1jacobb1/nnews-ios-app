@@ -15,7 +15,7 @@ extension BookmarkTabViewController {
             .observe(on: uiSchedule)
             .observeValues { [weak self] _ in
                 guard let self = self else { return }
-                self.bookmarkCollection.collectionView.reloadData()
+                self.bookmarkCollection.reloadData()
             }
         
         viewModel.inputs.viewDidLoad()

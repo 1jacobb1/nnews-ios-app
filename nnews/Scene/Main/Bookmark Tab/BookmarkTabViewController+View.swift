@@ -13,17 +13,23 @@ extension BookmarkTabViewController {
     }
     
     private func setUpBookmarkCollectionView() {
-        bookmarkCollection.collectionView.delegate = self
-        bookmarkCollection.collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
+        let minLineSpacing: CGFloat = 15
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 15
-        bookmarkCollection.collectionView.setCollectionViewLayout(layout, animated: false)
+        layout.minimumLineSpacing = minLineSpacing
+        bookmarkCollection.setCollectionViewLayout(layout, animated: false)
+        bookmarkCollection.backgroundColor = Asset.Colors.moreArticleTblBackground.color
+        bookmarkCollection.delegate = self
+        bookmarkCollection.dataSource = self
+        bookmarkCollection.register(ArticleCollectionCell.self)
+        bookmarkCollection.contentInset.left = minLineSpacing
+        bookmarkCollection.contentInset.right = minLineSpacing
         
         view.addSubview(bookmarkCollection)
         
         bookmarkCollection.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(view.safeArea.top)
+            make.left.right.bottom.equalToSuperview()
         }
     }
 }

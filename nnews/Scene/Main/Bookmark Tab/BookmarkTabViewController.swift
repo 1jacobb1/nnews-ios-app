@@ -9,7 +9,8 @@ import UIKit
 
 class BookmarkTabViewController: BaseViewController {
     // MARK: - UI
-    var bookmarkCollection: ArticlesCollectionView = ArticlesCollectionView()
+    var bookmarkCollection: UICollectionView = UICollectionView(frame: .zero,
+                                                                collectionViewLayout: UICollectionViewLayout())
     
     // MARK: - Properties
     var viewModel: BookmarkTabViewModel
@@ -32,5 +33,10 @@ class BookmarkTabViewController: BaseViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .white
         setUpBindings()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.inputs.viewDidAppear()
     }
 }

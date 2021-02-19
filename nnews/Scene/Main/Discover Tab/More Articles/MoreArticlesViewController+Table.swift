@@ -7,8 +7,7 @@
 
 import UIKit
 
-extension MoreArticlesViewController: 
-    UITableViewDelegate,
+extension MoreArticlesViewController: UITableViewDelegate,
     UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.outputs.articles.value.count

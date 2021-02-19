@@ -57,13 +57,6 @@ class DiscoverTabViewController: BaseViewController {
         navigationController?.navigationBar.backgroundColor = .white
         setUpBinding()
     }
-    
-    func presentNewsDetail(with article: Article) {
-        guard let url = article.url else { return }
-        let safariVC = SFSafariViewController(url: url)
-        safariVC.modalPresentationStyle = .overFullScreen
-        present(safariVC, animated: true)
-    }
 }
 
 extension DiscoverTabViewController {

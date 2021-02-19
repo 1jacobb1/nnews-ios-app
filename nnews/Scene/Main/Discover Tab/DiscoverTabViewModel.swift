@@ -142,15 +142,15 @@ class DiscoverTabViewModel: DiscoverTabViewModelTypes,
                 DDLogInfo("update articles: \(articleObjects)")
                 
                 self.headlineArticles.value = articleObjects
-                    .filter { $0.category.isEmpty }
+                    .filter { $0.category.isEmpty && !$0.rawUrlToImage.isEmpty }
                     .map { Article(realmObject: $0) }
                 
                 self.businessArticles.value = articleObjects
-                    .filter { $0.category == Category.business.rawValue }
+                    .filter { $0.category == Category.business.rawValue && !$0.rawUrlToImage.isEmpty }
                     .map { Article(realmObject: $0) }
                 
                 self.entertainmentArticles.value = articleObjects
-                    .filter { $0.category == Category.entertainment.rawValue }
+                    .filter { $0.category == Category.entertainment.rawValue && !$0.rawUrlToImage.isEmpty }
                     .map { Article(realmObject: $0) }
                 
                 break

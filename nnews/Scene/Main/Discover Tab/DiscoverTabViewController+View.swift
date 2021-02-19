@@ -19,7 +19,7 @@ extension DiscoverTabViewController {
     }
     
     private func setUpScrollView() {
-        scrollView.backgroundColor = .clear
+        scrollView.backgroundColor = Asset.Colors.moreArticleTblBackground.color
         
         view.addSubview(scrollView)
         
@@ -80,7 +80,6 @@ extension DiscoverTabViewController {
             make.top.equalTo(businessNewsSection.snp.bottom)
             make.left.right.equalTo(headlinesView)
             make.height.equalTo(370)
-//            make.bottom.equalToSuperview().inset(20)
         }
     }
     
