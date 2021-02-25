@@ -184,11 +184,13 @@ class DiscoverTabViewModel: DiscoverTabViewModelTypes,
                     if inPage == 1 {
                         LocalDataManager.thread.async {
                             guard let realm = try? LocalDataManager.getInstance() else { return }
+                            let dateWeekAgo = Date() - 7.days
                             try? realm.write {
                                 let articlesToDelete = realm.objects(ArticleObject.self)
                                     .filter {
                                         $0.country == country.rawValue &&
-                                        $0.category == category?.rawValue ?? ""
+                                        $0.category == category?.rawValue ?? "" &&
+                                        $0.publishedDateStringToDate < dateWeekAgo
                                     }
                                 realm.delete(articlesToDelete)
                             }

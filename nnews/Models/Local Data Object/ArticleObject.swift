@@ -31,4 +31,8 @@ class ArticleObject: Object {
     var urlToImage: URL? {
         URL(string: rawUrlToImage)
     }
+    
+    var publishedDateStringToDate: Date {
+        Date(publishedAt) ?? Date()
+    }
 }
