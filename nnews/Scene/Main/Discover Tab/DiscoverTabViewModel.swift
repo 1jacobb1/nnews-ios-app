@@ -8,6 +8,7 @@
 import ReactiveSwift
 import RealmSwift
 import CocoaLumberjack
+import SwiftDate
 
 protocol DiscoverTabViewModelInputs {
     func viewDidLoad()

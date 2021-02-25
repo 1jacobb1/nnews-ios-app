@@ -21,6 +21,7 @@
 		1637805325D61C6300ADCE27 /* BookMarkArticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637805225D61C6300ADCE27 /* BookMarkArticleObject.swift */; };
 		1637805825D61C9600ADCE27 /* BookMarkArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637805725D61C9600ADCE27 /* BookMarkArticle.swift */; };
 		1637805D25D61CDE00ADCE27 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637805C25D61CDE00ADCE27 /* Source.swift */; };
+		163C45A825E5029F006B333D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C45A725E5029E006B333D /* Date+Extensions.swift */; };
 		163F634425BBC8CB00365787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F634325BBC8CB00365787 /* AppDelegate.swift */; };
 		163F634625BBC8CB00365787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F634525BBC8CB00365787 /* SceneDelegate.swift */; };
 		163F634825BBC8CB00365787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F634725BBC8CB00365787 /* ViewController.swift */; };
@@ -101,6 +102,7 @@
 		1637805225D61C6300ADCE27 /* BookMarkArticleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkArticleObject.swift; sourceTree = "<group>"; };
 		1637805725D61C9600ADCE27 /* BookMarkArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkArticle.swift; sourceTree = "<group>"; };
 		1637805C25D61CDE00ADCE27 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		163C45A725E5029E006B333D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		163F634025BBC8CB00365787 /* nnews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nnews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163F634325BBC8CB00365787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		163F634525BBC8CB00365787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				163F670225BC2CCF00365787 /* CocoaLumberjack+Extension.swift */,
 				1684B92025DE4AEA0086F7BD /* NSPredicate+Extensions.swift */,
 				1684B92525DE4B500086F7BD /* Predicates.swift */,
+				163C45A725E5029E006B333D /* Date+Extensions.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 				1637805825D61C9600ADCE27 /* BookMarkArticle.swift in Sources */,
 				163F634425BBC8CB00365787 /* AppDelegate.swift in Sources */,
 				163F671125BC30D500365787 /* Persistable.swift in Sources */,
+				163C45A825E5029F006B333D /* Date+Extensions.swift in Sources */,
 				163F66C025BC244400365787 /* DiscoverTabViewController+Collection.swift in Sources */,
 				163F65A525BBED6200365787 /* DiscoverTabViewController.swift in Sources */,
 				1684B92625DE4B500086F7BD /* Predicates.swift in Sources */,
@@ -1014,7 +1018,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = nnewsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1036,7 +1040,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = nnewsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

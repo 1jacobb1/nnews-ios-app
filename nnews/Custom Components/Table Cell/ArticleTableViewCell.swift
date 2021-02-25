@@ -7,6 +7,7 @@
 
 import UIKit
 import CocoaLumberjack
+import SwiftDate
 
 class ArticleTableViewCell: UITableViewCell, ReusableView {
     // MARK: - UI
@@ -73,14 +74,14 @@ class ArticleTableViewCell: UITableViewCell, ReusableView {
     
     private func setUpPublishedAtLabel() {
         publishedAtLbl.numberOfLines = 1
-        publishedAtLbl.font = .systemFont(ofSize: 15)
+        publishedAtLbl.font = .systemFont(ofSize: 12)
         publishedAtLbl.textColor = .lightGray
         
         containerView.addSubview(publishedAtLbl)
         
         publishedAtLbl.snp.makeConstraints { make in
             make.top.equalTo(sourceLbl.snp.bottom).offset(5)
-            make.left.equalTo(sourceLbl)
+            make.left.equalTo(sourceLbl).offset(3)
         }
     }
     
@@ -129,7 +130,8 @@ class ArticleTableViewCell: UITableViewCell, ReusableView {
     
     private func setUpCellWithArticleContent() {
         sourceLbl.text = article?.source?.name
-        publishedAtLbl.text = article?.publishedAt
+        let timeAgo = Date(article?.publishedAt ?? "")?.timeAgo()
+        publishedAtLbl.text = timeAgo != nil ? "\(timeAgo!) ago." : ""
         bookMarkBtn.isSelected = article?.isBookMarked ?? false
         titleLbl.text = article?.title
         articleImgView.setImageWith(url: article?.urlToImage)
