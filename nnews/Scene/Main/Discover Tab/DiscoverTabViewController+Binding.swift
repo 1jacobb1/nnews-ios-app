@@ -42,6 +42,30 @@ extension DiscoverTabViewController {
             }
             .observeValues(handleArticleOn(collectionView:))
         
+        viewModel.outputs.generalArticles
+            .signal
+            .observe(on: uiSchedule)
+            .map { _ -> UICollectionView in
+                return self.generalNewsView.collectionView
+            }
+            .observeValues(handleArticleOn(collectionView:))
+
+        viewModel.outputs.sportsArticles
+            .signal
+            .observe(on: uiSchedule)
+            .map { _ -> UICollectionView in
+                return self.sportsNewsView.collectionView
+            }
+            .observeValues(handleArticleOn(collectionView:))
+
+        viewModel.outputs.healthArticles
+            .signal
+            .observe(on: uiSchedule)
+            .map { _ -> UICollectionView in
+                return self.healthNewsView.collectionView
+            }
+            .observeValues(handleArticleOn(collectionView:))
+
         viewModel.inputs.viewDidLoad()
     }
     

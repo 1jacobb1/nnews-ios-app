@@ -19,6 +19,12 @@ UICollectionViewDelegateFlowLayout {
             articles = viewModel.outputs.businessArticles.value
         } else if collectionView == entertainmentNewsView.collectionView {
             articles = viewModel.outputs.entertainmentArticles.value
+        } else if collectionView == generalNewsView.collectionView {
+            articles = viewModel.outputs.generalArticles.value
+        } else if collectionView == sportsNewsView.collectionView {
+            articles = viewModel.outputs.sportsArticles.value
+        } else if collectionView == healthNewsView.collectionView {
+            articles = viewModel.outputs.healthArticles.value
         }
         return articles.count
     }
@@ -33,11 +39,20 @@ UICollectionViewDelegateFlowLayout {
             articles = viewModel.outputs.businessArticles.value
         } else if collectionView == entertainmentNewsView.collectionView {
             articles = viewModel.outputs.entertainmentArticles.value
+        } else if collectionView == generalNewsView.collectionView {
+            articles = viewModel.outputs.generalArticles.value
+        } else if collectionView == sportsNewsView.collectionView {
+            articles = viewModel.outputs.sportsArticles.value
+        } else if collectionView == healthNewsView.collectionView {
+            articles = viewModel.outputs.healthArticles.value
         }
         
         if collectionView == headlinesView.collectionView ||
             collectionView == businessNewsView.collectionView ||
-            collectionView == entertainmentNewsView.collectionView {
+            collectionView == entertainmentNewsView.collectionView ||
+            collectionView == generalNewsView.collectionView ||
+            collectionView == sportsNewsView.collectionView ||
+            collectionView == healthNewsView.collectionView {
             let cell: ArticleCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
             if collectionView != headlinesView.collectionView {
                 cell.headlineImageHeight = .small
@@ -66,7 +81,10 @@ UICollectionViewDelegateFlowLayout {
             let height = collectionViewSize.height - 15
             size = CGSize(width: width, height: height)
         } else if collectionView == businessNewsView.collectionView ||
-                    collectionView == entertainmentNewsView.collectionView {
+                    collectionView == entertainmentNewsView.collectionView ||
+                    collectionView == generalNewsView.collectionView ||
+                    collectionView == sportsNewsView.collectionView ||
+                    collectionView == healthNewsView.collectionView {
             let width = (collectionViewSize.width - 15) / 2
             let height = (collectionViewSize.height - 15) / 2
             size = CGSize(width: width, height: height)

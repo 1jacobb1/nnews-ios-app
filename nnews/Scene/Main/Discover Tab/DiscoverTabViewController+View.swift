@@ -16,6 +16,12 @@ extension DiscoverTabViewController {
         setUpBusinessNewsView()
         setUpEntertainmentNewsSection()
         setUpEntertainmentNewsView()
+        setUpGeneralNewsSection()
+        setUpGeneralNewsView()
+        setUpSportsNewsSection()
+        setUpSportsNewsView()
+        setUpHealthNewsSection()
+        setUpHealthNewsView()
     }
     
     private func setUpScrollView() {
@@ -104,6 +110,84 @@ extension DiscoverTabViewController {
         
         entertainmentNewsView.snp.makeConstraints { make in
             make.top.equalTo(entertainmentNewsSection.snp.bottom)
+            make.left.right.equalTo(headlinesView)
+            make.height.equalTo(370)
+        }
+    }
+
+    private func setUpGeneralNewsSection() {
+        generalNewsSection.categoryLbl.text = "General"
+        generalNewsSection.categoryLbl.font = .boldSystemFont(ofSize: 20)
+
+        scrollView.addSubview(generalNewsSection)
+
+        generalNewsSection.snp.makeConstraints { make in
+            make.top.equalTo(entertainmentNewsView.snp.bottom).offset(10)
+            make.left.equalTo(entertainmentNewsView.snp.left).offset(15)
+            make.right.equalTo(entertainmentNewsView.snp.right)
+        }
+    }
+
+    private func setUpGeneralNewsView() {
+        generalNewsView.collectionView.delegate = self
+        generalNewsView.collectionView.dataSource = self
+
+        scrollView.addSubview(generalNewsView)
+
+        generalNewsView.snp.makeConstraints { make in
+            make.top.equalTo(generalNewsSection.snp.bottom)
+            make.left.right.equalTo(headlinesView)
+            make.height.equalTo(370)
+        }
+    }
+
+    private func setUpSportsNewsSection() {
+        sportsNewsSection.categoryLbl.text = "Sports"
+        sportsNewsSection.categoryLbl.font = .boldSystemFont(ofSize: 20)
+
+        scrollView.addSubview(sportsNewsSection)
+
+        sportsNewsSection.snp.makeConstraints { make in
+            make.top.equalTo(generalNewsView.snp.bottom).offset(10)
+            make.left.equalTo(generalNewsView.snp.left).offset(15)
+            make.right.equalTo(generalNewsView.snp.right)
+        }
+    }
+
+    private func setUpSportsNewsView() {
+        sportsNewsView.collectionView.delegate = self
+        sportsNewsView.collectionView.dataSource = self
+
+        scrollView.addSubview(sportsNewsView)
+
+        sportsNewsView.snp.makeConstraints { make in
+            make.top.equalTo(sportsNewsSection.snp.bottom)
+            make.left.right.equalTo(headlinesView)
+            make.height.equalTo(370)
+        }
+    }
+
+    private func setUpHealthNewsSection() {
+        healthNewsSection.categoryLbl.text = "Health"
+        healthNewsSection.categoryLbl.font = .boldSystemFont(ofSize: 20)
+
+        scrollView.addSubview(healthNewsSection)
+
+        healthNewsSection.snp.makeConstraints { make in
+            make.top.equalTo(sportsNewsView.snp.bottom).offset(10)
+            make.left.equalTo(sportsNewsView.snp.left).offset(15)
+            make.right.equalTo(sportsNewsView.snp.right)
+        }
+    }
+
+    private func setUpHealthNewsView() {
+        healthNewsView.collectionView.delegate = self
+        healthNewsView.collectionView.dataSource = self
+
+        scrollView.addSubview(healthNewsView)
+
+        healthNewsView.snp.makeConstraints { make in
+            make.top.equalTo(healthNewsSection.snp.bottom)
             make.left.right.equalTo(headlinesView)
             make.height.equalTo(370)
             make.bottom.equalToSuperview().inset(20)
