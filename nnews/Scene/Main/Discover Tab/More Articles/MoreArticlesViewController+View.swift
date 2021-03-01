@@ -26,7 +26,8 @@ extension MoreArticlesViewController {
         view.addSubview(articleTableView)
         
         articleTableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(view.safeArea.top)
+            make.bottom.left.right.equalToSuperview()
         }
     }
 }

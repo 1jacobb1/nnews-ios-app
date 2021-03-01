@@ -11,6 +11,7 @@ import SafariServices
 class MoreArticlesViewController: BaseViewController {
     // MARK: - UI
     var articleTableView = UITableView()
+    var searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Properties
     var viewModel: MoreArticlesViewModel
@@ -29,6 +30,8 @@ class MoreArticlesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigationBar()
+        setUpSearchController()
         setUpBinding()
     }
     
@@ -40,5 +43,35 @@ class MoreArticlesViewController: BaseViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         viewModel.inputs.viewDidDisappear()
+    }
+
+    private func setUpNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .white
+    }
+
+    private func setUpSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        definesPresentationContext = true
+        searchController.searchBar.delegate = self
+
+        navigationItem.searchController = searchController
+    }
+}
+
+extension MoreArticlesViewController: UISearchResultsUpdating,
+                                      UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.inputs.didSearchInputChange(searchController.searchBar.text ?? "")
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.inputs.didSearchBarSearchButtonClicked()
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.inputs.didSearchBarCancelButtonClicked()
     }
 }

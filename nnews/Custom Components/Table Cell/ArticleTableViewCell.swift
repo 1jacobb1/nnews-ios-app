@@ -123,7 +123,7 @@ class ArticleTableViewCell: UITableViewCell, ReusableView {
         articleImgView.snp.makeConstraints { make in
             make.top.equalTo(titleLbl.snp.bottom).offset(8)
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(0)
             make.height.equalTo(180)
         }
     }
@@ -142,7 +142,7 @@ class ArticleTableViewCell: UITableViewCell, ReusableView {
     private func updateImageViewHeight(_ height: CGFloat) {
         articleImgView.snp.updateConstraints { update in
             update.height.equalTo(height)
-            update.bottom.equalToSuperview().inset(height == 0 ? 5 : 20)
+            update.bottom.equalToSuperview().inset(height == 0 ? 5 : 0)
         }
     }
 }

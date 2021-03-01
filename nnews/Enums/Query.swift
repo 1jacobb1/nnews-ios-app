@@ -12,4 +12,6 @@ enum Query: String {
     case id
     case category
     case country
+    case rawUrlToImage
+    case publishedAt
 }

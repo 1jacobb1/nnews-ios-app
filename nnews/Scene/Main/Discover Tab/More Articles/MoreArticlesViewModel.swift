@@ -14,6 +14,9 @@ protocol MoreArticlesViewModelInputs {
     func viewDidAppear()
     func viewDidDisappear()
     func fetchMoreArticle()
+    func didSearchInputChange(_ keyword: String)
+    func didSearchBarSearchButtonClicked()
+    func didSearchBarCancelButtonClicked()
 }
 
 protocol MoreArticlesViewModelOutputs {
@@ -65,6 +68,25 @@ class MoreArticlesViewModel: MoreArticlesViewModelTypes,
             .observeValues { [unowned self] _ in
                 self.requestFetchArticleApi()
             }
+
+        didSearchInputChangeProp.signal
+            .filter { !$0.isEmpty }
+            .observeValues { [unowned self] keyword in
+                let result = self.articles.value.filter { article -> Bool in
+                    article.author?.contains(keyword) ?? false ||
+                        article.category?.rawValue.contains(keyword) ?? false ||
+                        article.content?.contains(keyword) ?? false
+                }
+                self.searchResult.value = result
+            }
+
+        articles <~ searchResult
+
+        articles <~ didSearchBarCancelButtonClickedProp.signal
+            .map { _ -> [Article] in
+                guard let test = self.getDefaultArticles() else { return [] }
+                return test.map { Article(realmObject: $0) }
+            }
     }
     
     private var viewDidLoadProp = MutableProperty(())
@@ -87,14 +109,36 @@ class MoreArticlesViewModel: MoreArticlesViewModelTypes,
         fetchMoreArticleProp.value = ()
     }
     
-    private func setUpArticleNotificationToken() {
-        guard let realm = try? LocalDataManager.getInstance() else { return }
-        var predicateFilter = Predicates.eq(k: .country, v: articleCountry.value.rawValue)
-        if let category = articleCategory.value {
+    private var searchResult: MutableProperty<[Article]> = MutableProperty([])
+    private var didSearchInputChangeProp = MutableProperty("")
+    func didSearchInputChange(_ keyword: String) {
+        didSearchInputChangeProp.value = keyword
+    }
+
+    private var didSearchBarSearchButtonClickedProp = MutableProperty(())
+    func didSearchBarSearchButtonClicked() {
+        didSearchBarSearchButtonClickedProp.value = ()
+    }
+
+    private var didSearchBarCancelButtonClickedProp = MutableProperty(())
+    func didSearchBarCancelButtonClicked() {
+        didSearchBarCancelButtonClickedProp.value = ()
+    }
+
+    private func getDefaultArticles() -> Results<ArticleObject>? {
+        guard let realm = try? LocalDataManager.getInstance() else { return nil }
+        var predicateFilter = Predicates.eq(k: .country, v: self.articleCountry.value.rawValue)
+            .and(Predicates.isNotEmpty(k: .rawUrlToImage))
+        if let category = self.articleCategory.value {
             predicateFilter = predicateFilter.and(Predicates.eq(k: .category, v: category.rawValue))
         }
-        let results = realm.objects(ArticleObject.self)
+        return realm.objects(ArticleObject.self)
             .filter(predicateFilter)
+            .sorted(byKeyPath: Query.publishedAt.rawValue, ascending: false)
+    }
+
+    private func setUpArticleNotificationToken() {
+        guard let results = getDefaultArticles() else { return }
         articleNotificationToken = results.observe(on: LocalDataManager.thread) { changes in
             switch changes {
             case .initial(let articleObjects),
