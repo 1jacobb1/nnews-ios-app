@@ -1,10 +1,13 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+$tagetOSVersion = '12.0'
+
+platform :ios, $tagetOSVersion
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = $tagetOSVersion
+      config.build_settings['CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER'] = 'NO'
     end
   end
 end
@@ -30,6 +33,9 @@ target 'nnews' do
   pod 'KeychainSwift'
   pod 'CocoaLumberjack/Swift'
   pod 'Fakery'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   pod 'NVActivityIndicatorView'
   pod 'Mocker', '~> 2.2.0'
   pod 'SDWebImage', '~> 4.0'

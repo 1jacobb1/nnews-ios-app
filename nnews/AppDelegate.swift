@@ -7,6 +7,7 @@
 // https://newsapi.org/docs/endpoints/top-headlines
 
 import UIKit
+import Firebase
 import IQKeyboardManagerSwift
 import CocoaLumberjack
 
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         DDOSLogger.configure()
         LocalDataManager.configure()
-        
+        FirebaseApp.configure()
         let window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = ApplicationCoordinator(window: window)
         guard let coordinator = appCoordinator else { return false }
