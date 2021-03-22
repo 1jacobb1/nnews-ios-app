@@ -245,7 +245,7 @@ PrePush:
     quiet: false
 
   RunTestsWithFastlane:
-    enabled: true
+    enabled: false
     requires_files: false
     required: true
     quite: false
